@@ -103,6 +103,11 @@
   content: counters(section, ".") " ";  
   margin-right: .5em;
 }
+.resumeEditor blockquote {
+  margin: 1em;
+  padding: .5em;
+  background: #ddd;
+}
 `],
         currentMarkdown: '',
         fullMarkdown: `方应杭
@@ -132,7 +137,7 @@
 * [GitHub](https://github.com/frankfang)
 * [我的文章](https://www.zhihu.com/people/zhihusucks/pins/posts)
 
-> 如果你喜欢这个效果，Fork 我的项目，打造你自己的简历！
+> 如果你喜欢这个效果，Fork [我的项目](https://github.com/jirengu-inc/animating-resume)，打造你自己的简历！
 
 `
       }
