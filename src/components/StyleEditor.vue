@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div v-html="code"></div>
     <pre v-html="highlightedCode"></pre>
   </div>
 </template>
