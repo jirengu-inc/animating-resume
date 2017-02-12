@@ -1,21 +1,27 @@
-# resume-a-resume
+# 一个会动的简历模板
 
 > This is my resume
 
-## Build Setup
+## 使用方法
 
 ``` bash
-# install dependencies
+git clone git@github.com:jirengu-inc/animating-resume.git
+cd animating-resume
 npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 部署方法
+
+
+1. 编辑 config/index.js，修改第 10 行的 assetsPublicPath，值为 `项目名/dist`。如果你没有修改项目名 animating-resume，则可跳过此步骤。
+
+2. 编译、上传
+    ``` bash
+    npm run build
+    git commit . -m "update"
+    git push
+    ```
+
+3. 开启 GitHub Pages 功能
+
