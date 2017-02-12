@@ -25,15 +25,39 @@
 二月了，好多公司都在招聘，我想，我也应该写一份简历呀。
 说做就做！
 -->
-`, `
+
 <style>
-* {border-color: red;}
+  * {
+    transition: all 1s;
+  }
+  
+  html {
+    background: hsl(155, 50%, 50%);
+  }
+  
+  .styleEditor {
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid;
+  }
 </style>
 `],
         currentMarkdown: '',
         fullMarkdown: `
 # 方方
 
+资深前端开发工程师
+
+# 技能
+
+* 前端开发
+* Rails 开发
+* Node.js 开发
+* 技术吹水
+
+# 联系方式
+
+保密
 `
       }
     },
