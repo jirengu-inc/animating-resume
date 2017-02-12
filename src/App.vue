@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    <StyleEditor class="styleEditor" :code="currentStyle"></StyleEditor>
+    <StyleEditor :code="currentStyle"></StyleEditor>
+    <ResumeEditor :markdown="currentMarkdown"></ResumeEditor>
   </div>
 </template>
 
 <script>
   import StyleEditor from './components/StyleEditor'
+  import ResumeEditor from './components/ResumeEditor'
   import './assets/reset.css'
 
   export default {
     name: 'app',
-    components: { StyleEditor, }, data() {
+    components: {
+      StyleEditor,
+      ResumeEditor
+    },
+    data() {
       return {
-        currentStyle: '', fullStyle: `
+        currentStyle: '',
+        fullStyle: `
 <!--
 大家好，我是方方 
 二月了，好多公司都在招聘，我想，我也应该写一份简历呀。
@@ -35,18 +42,58 @@
   }
 </style>
 `,
+        currentMarkdown: '',
+        fullMarkdown: `
+# 方方
+
+资深前端开发工程师
+
+# 技能
+
+* 前端开发
+* Rails 开发
+* Node.js 开发
+* 技术吹水
+
+# 联系方式
+
+保密
+`
       }
-    }, created() {
-      let length = this.fullStyle.length
-      let inteval = 50
-      let a = () => {
-        if (this.currentStyle.length
-          < length) {
-          this.currentStyle = this.fullStyle.substring(0, this.currentStyle.length + 1)
-          setTimeout(a, inteval)
-        }
+    },
+    created() {
+      this.progressivelyShowStyle()
+    },
+    methods: {
+      async progressivelyShowStyle(done) {
+        let length = this.fullStyle.length
+        let inteval = 50
+        let showStyle = (async function () {
+          if (this.currentStyle.length < length) {
+            this.currentStyle = this.fullStyle.substring(0, this.currentStyle.length + 1)
+            setTimeout(showStyle, inteval)
+          } else {
+            await this.progressivelyShowResume()
+            console.log(1)
+          }
+        }).bind(this)
+        showStyle()
+      },
+      progressivelyShowResume(done) {
+        return new Promise((resolve, reject) => {
+          let length = this.fullMarkdown.length
+          let inteval = 50
+          let showResume = () => {
+            if (this.currentMarkdown.length < length) {
+              this.currentMarkdown = this.fullMarkdown.substring(0, this.currentMarkdown.length + 1)
+              setTimeout(showResume, inteval)
+            } else {
+              resolve()
+            }
+          }
+          showResume()
+        })
       }
-      setTimeout(a, inteval)
     }
   }
 
