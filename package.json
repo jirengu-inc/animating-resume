@@ -9,6 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "marked": "^0.3.6",
     "prismjs": "^1.6.0",
     "vue": "^2.1.10"
   },
