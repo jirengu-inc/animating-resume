@@ -38,26 +38,32 @@
       }
     },
     created() {
-      this.progressivelyShowStyle()
+      this.makeResume()
     },
     methods: {
-      async progressivelyShowStyle() {
-        let inteval = 50
-        let showStyle = (async function (n) {
-          let style = this.fullStyle[n]
-          if (!style) { return }
-          let length = this.fullStyle.filter((_, index) => index <= n).map((item) => item.length).reduce((p, c) => p + c, 0)
-          let prefixLength = length - style.length
-          if (this.currentStyle.length < length) {
-            let l = this.currentStyle.length - prefixLength
-            this.currentStyle += style.substring(l, l + 1) || ' '
-            setTimeout(showStyle, inteval, n)
-          } else {
-            if (n === 0) { await this.progressivelyShowResume() }
-            showStyle(n + 1)
-          }
-        }).bind(this)
-        showStyle(0)
+      makeResume: async function () {
+        await this.progressivelyShowStyle(0)
+        await this.progressivelyShowResume()
+        await this.progressivelyShowStyle(1)
+      },
+      progressivelyShowStyle(n) {
+        return new Promise((resolve, reject) => {
+          let inteval = 50
+          let showStyle = (async function () {
+            let style = this.fullStyle[n]
+            if (!style) { return }
+            let length = this.fullStyle.filter((_, index) => index <= n).map((item) => item.length).reduce((p, c) => p + c, 0)
+            let prefixLength = length - style.length
+            if (this.currentStyle.length < length) {
+              let l = this.currentStyle.length - prefixLength
+              this.currentStyle += style.substring(l, l + 1) || ' '
+              setTimeout(showStyle, inteval)
+            } else {
+              resolve()
+            }
+          }).bind(this)
+          showStyle()
+        })
       },
       progressivelyShowResume() {
         return new Promise((resolve, reject) => {
