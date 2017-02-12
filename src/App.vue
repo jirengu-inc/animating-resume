@@ -22,7 +22,7 @@
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
-          `  /*
+          `/*
 * Inspired by http://strml.net/
 * 大家好，我是方方 
 * 二月了，好多公司都在招聘，你是不是也在准备简历呀。
