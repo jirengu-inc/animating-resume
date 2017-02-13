@@ -230,11 +230,6 @@ html{
     min-height: 100vh;
   }
   
-  .styleEditor {
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-  }
-  
   * {
     -webkit-transition: all .3s;
     transition: all .3s;
