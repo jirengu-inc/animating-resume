@@ -7,10 +7,6 @@
 html[data-v-685c2ce2] {
   min-height: 100vh;
 }
-.styleEditor[data-v-685c2ce2] {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
-}
 *[data-v-685c2ce2] {
   transition: all .3s;
 }
@@ -34,4 +30,4 @@ to {
 *{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 *::after{box-sizing: border-box;}
-/*# sourceMappingURL=app.63af19edbc07e57853169b9f5fc37155.css.map*/
+/*# sourceMappingURL=app.0f2e3be2c21a846dc69b08995de466a1.css.map*/
