@@ -31,11 +31,12 @@
 
 /* 首先给所有元素加上过渡效果 */
 * {
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 /* 白色背景太单调了，我们来点背景 */
 html {
-  color: rgb(222,222,222); background: rgb(0,43,54);
+  color: rgb(222,222,222); background: rgb(0,43,54); 
 }
 /* 文字离边框太近了 */
 .styleEditor {
@@ -53,13 +54,15 @@ html {
 
 /* 加点 3D 效果呗 */
 html{
-  perspective: 1000px;
-  min-height: 100vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 .styleEditor {
   position: fixed; left: 0; top: 0; 
+  -webkit-transition: none; 
   transition: none;
-  transform: rotateY(10deg) translateZ(-100px) ;
+  -webkit-transform: rotateY(10deg) translateZ(-100px) ;
+          transform: rotateY(10deg) translateZ(-100px) ;
 }
 
 /* 接下来我给自己准备一个编辑器 */
@@ -220,5 +223,8 @@ html{
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  html{
+    min-height: 100vh;
   }
 </style>
