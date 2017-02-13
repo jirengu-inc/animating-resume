@@ -4,6 +4,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html[data-v-685c2ce2]{
+  min-height: 100vh;
+}
 
 .code[data-v-3696a194] {
   display: none;
@@ -24,4 +27,4 @@ to {
 *{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 *::after{box-sizing: border-box;}
-/*# sourceMappingURL=app.d553437a8d3959de161c5353822951fe.css.map*/
+/*# sourceMappingURL=app.efa75347e042683da668aa9bbe608b18.css.map*/
