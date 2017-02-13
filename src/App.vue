@@ -173,6 +173,7 @@ html{
           let showStyle = (async function () {
             let style = this.fullStyle[n]
             if (!style) { return }
+            // 计算前 n 个 style 的字符总数
             let length = this.fullStyle.filter((_, index) => index <= n).map((item) => item.length).reduce((p, c) => p + c, 0)
             let prefixLength = length - style.length
             if (this.currentStyle.length < length) {
@@ -184,7 +185,7 @@ html{
                   this.$refs.styleEditor.goBottom()
                 })
               }
-              setTimeout(showStyle, char === '\n' ? interval : interval)
+              setTimeout(showStyle, interval)
             } else {
               resolve()
             }
