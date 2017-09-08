@@ -29,7 +29,10 @@
 
 <style scoped>
   pre{
-    max-height: 3000px;
+  }
+  @media (max-width:500px){
+    pre{
+    }
   }
   .code {
     display: none;

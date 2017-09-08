@@ -18,6 +18,9 @@
     methods: {
       goBottom: function () {
         this.$refs.container.scrollTop = 100000
+      },
+      goTop: function(){
+        this.$refs.container.scrollTop = 0
       }
     }
   }
@@ -25,10 +28,15 @@
 </script>
 
 <style scoped>
+
+  @media (max-width:500px){
+    .resumeEditor{
+    }
+  }
   .htmlMode {
     animation: flip 2s;
   }
-  
+
   @keyframes flip {
     from {
       opacity: 0;
