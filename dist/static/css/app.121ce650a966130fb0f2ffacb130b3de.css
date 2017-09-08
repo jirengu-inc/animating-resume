@@ -1,0 +1,57 @@
+
+#app[data-v-288975d1] {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html[data-v-288975d1] {
+  min-height: 100vh;
+}
+*[data-v-288975d1]{
+  box-sizing: border-box;
+}
+
+pre[data-v-2ca90776]{
+}
+@media (max-width:500px){
+pre[data-v-2ca90776]{
+}
+}
+.code[data-v-2ca90776] {
+  display: none;
+}
+
+@media (max-width:500px){
+.resumeEditor[data-v-2df95543]{
+}
+}
+.htmlMode[data-v-2df95543] {
+  animation: flip 2s;
+}
+@keyframes flip {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+*{margin: 0; padding: 0;}
+*{box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+#app[data-v-b76f4cbc] {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh; position: relative;
+}
+html[data-v-b76f4cbc] {
+  min-height: 100vh;
+}
+*[data-v-b76f4cbc]{
+  box-sizing: border-box;
+}
+
+
+/*# sourceMappingURL=app.121ce650a966130fb0f2ffacb130b3de.css.map*/
