@@ -14,6 +14,9 @@ pre[data-v-288975d1]{
   transition: all .3s;
 }
 
+pre[data-v-2ca90776]{
+  max-height: 3000px;
+}
 .code[data-v-2ca90776] {
   display: none;
 }
@@ -33,4 +36,4 @@ to {
 *{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 *::after{box-sizing: border-box;}
-/*# sourceMappingURL=app.0073128b6fa10781ddd96d9cf1af5b33.css.map*/
+/*# sourceMappingURL=app.be24b74231fdf71170f283eb28cebcc7.css.map*/

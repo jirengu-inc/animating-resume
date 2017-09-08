@@ -28,6 +28,9 @@
 </script>
 
 <style scoped>
+  pre{
+    max-height: 3000px;
+  }
   .code {
     display: none;
   }
