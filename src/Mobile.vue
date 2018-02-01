@@ -216,7 +216,6 @@ Fork [我的项目](https://github.com/jirengu-inc/animating-resume)，打造你
           let showResume = () => {
             if (this.currentMarkdown.length < length) {
               this.currentMarkdown = this.fullMarkdown.substring(0, this.currentMarkdown.length + 1)
-              let lastChar = this.currentMarkdown[this.currentMarkdown.length - 1]
               let prevChar = this.currentMarkdown[this.currentMarkdown.length - 2]
               if (prevChar === '\n' && this.$refs.resumeEditor) {
                 this.$nextTick(() => this.$refs.resumeEditor.goBottom())
